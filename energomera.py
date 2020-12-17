@@ -54,9 +54,9 @@ def data_decode(sdata):
                     lrc = (lrc + ord(sdata[i])) & 0x7f
 
       # Checking the last byte with LRC
-      msg['lrc'] = lrc == ord(sdata[len(sdata) - 1])
-
-   return msg
+    msg['lrc'] = lrc == ord(sdata[len(sdata) - 1])
+    
+    return msg
 
 
 # Encode data in string with addition of calculated LRC
